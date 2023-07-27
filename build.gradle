@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'pe.inuk.book.jaction' // 프로젝트 그룹 이름
+version '0.2' // 프로젝트 버전
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter() // 필요한 추가 종속성을 찾기 위해 Maven 중앙 저장소를 사용합니다.
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api:1.7.32' // 예시로 SLF4J 라이브러리를 추가합니다.
+    implementation 'org.projectlombok:lombok:1.18.28'
+}
+
+sourceSets{
+    main{
+        java{
+            srcDirs = ['src/main/java']
+        }
+        resources{
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+mainClassName = "pe.inuk.book.jaction.Main"
